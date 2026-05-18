@@ -130,3 +130,5 @@ Models use 200 estimators with preprocessing: missing value imputation and one-h
 ## License
 
 This project is provided for educational and research purposes.
+
+DEPLOYED LINK:https://health-mortality-prediction-system-2.onrender.com/
