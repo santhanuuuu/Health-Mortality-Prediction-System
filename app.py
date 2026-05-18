@@ -9,9 +9,9 @@ import pickle
 from datetime import datetime
 from typing import Any
 
-import numpy as np
-import pandas as pd
-from flask import Flask, flash, redirect, render_template, request, url_for
+import numpy as np # type: ignore
+import pandas as pd # type: ignore
+from flask import Flask, flash, redirect, render_template, request, url_for # type: ignore
 
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 MODEL_DIR = os.path.join(BASE_DIR, "model")
@@ -474,4 +474,5 @@ if __name__ == "__main__":
         train_and_save_models()
         load_models()
 
-    app.run(debug=True, host="0.0.0.0", port=5000)
+    port = int(os.environ.get("PORT", 5000))
+    app.run(host="0.0.0.0", port=port)
